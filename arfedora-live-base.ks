@@ -171,8 +171,6 @@ fi
 
 
 
-#add by youssef sourani
-echo -e "if [ -f \`which powerline-daemon\` ]; then\n powerline-daemon -q\n POWERLINE_BASH_CONTINUATION=1\n POWERLINE_BASH_SELECT=1\n . /usr/share/powerline/bash/powerline.sh\nfi" |tee -a /etc/skel/.bashrc
 
 
 
