@@ -93,7 +93,6 @@ steam
 wine
 playonlinux
 flash-plugin
-flash-plugin.i386
 geany
 geany-themes
 vokoscreen
