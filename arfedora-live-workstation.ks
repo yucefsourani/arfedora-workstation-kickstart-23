@@ -2,6 +2,7 @@
 %include arfedora-workstation-packages.ks
 %include snippets/packagekit-cached-metadata.ks
 
+#config by youssef sourani
 #part / --size 6144
 part / --size 8192
 

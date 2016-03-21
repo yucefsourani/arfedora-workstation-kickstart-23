@@ -339,11 +339,13 @@ echo 'File created by kickstart. See systemd-update-done.service(8).' \
 %end
 
 
+#config by youssef sourani
 %post --nochroot
 cp $INSTALL_ROOT/usr/share/licenses/*-release/* $LIVE_ROOT/
 /usr/bin/mkdir -p $INSTALL_ROOT/etc/skel/.mozilla/firefox/arfedora.default
-/usr/bin/cp /home/youcef/extra/mozilla/firefox/profiles.ini $INSTALL_ROOT/etc/skel/.mozilla/firefox/
-/usr/bin/cp /home/youcef/extra/mozilla/firefox/arfedora.default/prefs.js $INSTALL_ROOT/etc/skel/.mozilla/firefox/arfedora.default
+/usr/bin/cp $HOME/arfedora-workstation-kickstart-23/extra/mozilla/firefox/profiles.ini $INSTALL_ROOT/etc/skel/.mozilla/firefox/
+/usr/bin/cp $HOME/arfedora-workstation-kickstart-23/extra/mozilla/firefox/arfedora.default/prefs.js $INSTALL_ROOT/etc/skel/.mozilla/firefox/arfedora.default
+/usr/bin/cp $HOME/arfedora-workstation-kickstart-23/extra/bashrc $INSTALL_ROOT/etc/skel/.bashrc
 # only works on x86, x86_64
 if [ "$(uname -i)" = "i386" -o "$(uname -i)" = "x86_64" ]; then
   if [ ! -d $LIVE_ROOT/LiveOS ]; then mkdir -p $LIVE_ROOT/LiveOS ; fi
